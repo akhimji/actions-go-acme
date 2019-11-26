@@ -5,7 +5,7 @@ import (
 	"html/template"
 	"net/http"
 
-	"github.com/alyarctiq/actions-go-mod/randombeer"
+	"github.com/alyarctiq/actions-go-acme/randombeer"
 )
 
 func thisbeer(w http.ResponseWriter, r *http.Request) {
