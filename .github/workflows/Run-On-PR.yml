@@ -54,3 +54,18 @@ jobs:
       run: go build -v ./...
       env:
         GOPATH: /home/runner/work/actions-go-acme/go  
+
+    - name: Notify Slack Of Failure
+      if: failure()
+      env:
+        SLACK_BOT_TOKEN: ${{ secrets.SLACK_WEBHOOK }}
+      uses: pullreminders/slack-action@master
+      with:
+        args: '{\"channel\":\"aly-test\",\"text\":\":github: :package: Package PR-Build-Test Failed !! Fix Your Code! :sob:\",\"username\":\"GitHub Action\"}'
+
+    - name: Notify Slack Success 
+      env:
+        SLACK_BOT_TOKEN: ${{ secrets.SLACK_WEBHOOK }}
+      uses: pullreminders/slack-action@master
+      with:
+        args: '{\"channel\":\"aly-test\",\"text\":\":github: :package: Package PR-Build-Test Success !! :aw_yeah:\",\"username\":\"GitHub Action\"}' 
