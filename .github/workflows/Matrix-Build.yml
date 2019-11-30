@@ -27,6 +27,12 @@ jobs:
     - name: dir
       run: dir $GITHUB_WORKSPACE
       
+    - name: Debug POST
+      run: |
+        pwd
+        echo ${GOPATH}
+        echo ${GOROOT}
+            
 #    - name: Get dependencies
 #      run: |
 #        go get -v -t -d ./...
@@ -37,9 +43,9 @@ jobs:
 #      env:
 #        GOPATH: /home/runner/work/actions-go-acme/go 
 
-    - name: Build/Test
-      #run: go build -v ./...
-      run: go build -v .
-      #env:
+#    - name: Build/Test
+#      #run: go build -v ./...
+#      run: go build -v .
+#      env:
         #GOPATH: /home/runner/work/actions-go-acme/go 
         #GOPATH: D:\a\actions-go-acme\go\src\github.com\alyarctiq\actions-go-acme
