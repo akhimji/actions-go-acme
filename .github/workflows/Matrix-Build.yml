@@ -1,0 +1,25 @@
+name: Matrix-Build
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        go-version: [1.12.x, 1.13.x]
+        platform: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.platform }}
+    steps:
+    - name: Install Go
+      uses: actions/setup-go@v1
+      with:
+        go-version: ${{ matrix.go-version }}
+
+    - name: Check out code to a GOPATH compatible directory
+      uses: actions/checkout@v1
+      with:
+        fetch-depth: 1
+        path: go/src/github.com/alyarctiq/actions-go-acme
+  
+    - name: Test
+      run: go test ./...
