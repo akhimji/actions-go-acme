@@ -40,6 +40,6 @@ jobs:
     - name: Build/Test
       #run: go build -v ./...
       run: go build -v .
-      env:
+      #env:
         #GOPATH: /home/runner/work/actions-go-acme/go 
         #GOPATH: D:\a\actions-go-acme\go\src\github.com\alyarctiq\actions-go-acme
