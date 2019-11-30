@@ -6,9 +6,8 @@ jobs:
   test:
     strategy:
       matrix:
-        go-version: [1.12.x, 1.13.x]
-        #platform: [ubuntu-latest, macos-latest, windows-latest]
-        platform: [ macos-latest]
+        go-version: [1.11.x, 1.12.x, 1.13.x]
+        platform: [ubuntu-latest, macos-latest, windows-latest]
     runs-on: ${{ matrix.platform }}
     
     steps:
@@ -31,14 +30,14 @@ jobs:
         GOPATH: /Users/runner/runners/2.161.0/work/actions-go-acme/go
 
             
-#    - name: Run end-to-end tests on Linux
-#      if: github.event_name == 'push' && matrix.platform == 'ubuntu-latest'
-#      run: go build -v ./...
-#      env:
-#        GOPATH: /home/runner/work/actions-go-acme/go 
+    - name: Run end-to-end tests on Linux
+      if: github.event_name == 'push' && matrix.platform == 'ubuntu-latest'
+      run: go build -v ./...
+      env:
+        GOPATH: /home/runner/work/actions-go-acme/go 
 
-#    - name: Run end-to-end tests on Windows
-#      if: github.event_name == 'push' && matrix.platform == 'windows-latest'
-#      run: go build -v .
-#      env:
-#       GOPATH: d:\a\actions-go-acme\go\
+    - name: Run end-to-end tests on Windows
+      if: github.event_name == 'push' && matrix.platform == 'windows-latest'
+      run: go build -v .
+      env:
+       GOPATH: d:\a\actions-go-acme\go\
