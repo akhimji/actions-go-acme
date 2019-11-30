@@ -22,4 +22,4 @@ jobs:
         path: go/src/github.com/alyarctiq/actions-go-acme
   
     - name: Test
-      run: go test ./...
+      run: go test .
