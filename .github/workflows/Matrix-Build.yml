@@ -23,15 +23,15 @@ jobs:
         fetch-depth: 1
         path: go/src/github.com/alyarctiq/actions-go-acme
     
-    - name: Get dependencies
-      run: |
-        go get -v -t -d ./...
-        if [ -f Gopkg.toml ]; then
-            curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
-            dep ensure
-        fi
-      env:
-        GOPATH: /home/runner/work/actions-go-acme/go 
+#    - name: Get dependencies
+#      run: |
+#        go get -v -t -d ./...
+#        if [ -f Gopkg.toml ]; then
+#            curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
+#            dep ensure
+#        fi
+#      env:
+#        GOPATH: /home/runner/work/actions-go-acme/go 
 
     - name: Build/Test
       run: go build -v ./...
