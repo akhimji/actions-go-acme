@@ -26,6 +26,7 @@ jobs:
         
             
     - name: Run end-to-end tests on Linux
+      if: github.event_name == 'push' && matrix.platform == 'ubuntu-latest'
       run: go build -v ./...
       env:
         GOPATH: /home/runner/work/actions-go-acme/go 
