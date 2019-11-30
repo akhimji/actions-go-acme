@@ -35,6 +35,7 @@ jobs:
 #        GOPATH: /home/runner/work/actions-go-acme/go 
 
     - name: Build/Test
-      run: go build -v ./...
+      #run: go build -v ./...
+      run: go build -v .
       env:
         GOPATH: /home/runner/work/actions-go-acme/go 
