@@ -5,8 +5,8 @@ import (
 	"html/template"
 	"net/http"
 
-	"github.com/alyarctiq/actions-go-acme/randombeer"
-	randomsimpson "github.com/alyarctiq/actions-go-acme/simpsons"
+	"github.com\alyarctiq\actions-go-acme\randombeer"
+	randomsimpson "github.com\alyarctiq\actions-go-acme\simpsons"
 )
 
 func thisbeer(w http.ResponseWriter, r *http.Request) {
