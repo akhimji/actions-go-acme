@@ -20,9 +20,9 @@ jobs:
 
     - name: Check out code to a GOPATH compatible directory
       uses: actions/checkout@v1
-      #with:
-      #  fetch-depth: 1
-      #  path: go/src/github.com/alyarctiq/actions-go-acme
+      with:
+        fetch-depth: 1
+        path: go/src/github.com/alyarctiq/actions-go-acme
         
     - name: dir
       run: dir $GITHUB_WORKSPACE
