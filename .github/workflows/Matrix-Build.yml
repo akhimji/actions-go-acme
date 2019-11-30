@@ -22,7 +22,7 @@ jobs:
       uses: actions/checkout@v1
       with:
         fetch-depth: 1
-        path: go/src/github.com/alyarctiq/actions-go-acme
+        path: go/src
         
     - name: dir
       run: dir $GITHUB_WORKSPACE
@@ -43,9 +43,9 @@ jobs:
 #      env:
 #        GOPATH: /home/runner/work/actions-go-acme/go 
 
-#    - name: Build/Test
-#      #run: go build -v ./...
-#      run: go build -v .
+    - name: Build/Test
+      #run: go build -v ./...
+      run: go build -v .
 #      env:
         #GOPATH: /home/runner/work/actions-go-acme/go 
         #GOPATH: D:\a\actions-go-acme\go\src\github.com\alyarctiq\actions-go-acme
