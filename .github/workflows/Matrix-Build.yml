@@ -30,4 +30,4 @@ jobs:
       run: go build -v .
       env:
         #GOPATH: /home/runner/work/actions-go-acme/go 
-        GOPATH: d:\a\actions-go-acme\go\src\
+        GOPATH: d:\a\actions-go-acme\go\
