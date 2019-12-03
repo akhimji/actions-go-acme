@@ -24,20 +24,20 @@ jobs:
         path: go/src/github.com/alyarctiq/actions-go-acme
 
     - name: Run end-to-end tests on macOS
-      if: github.event_name == 'push' && matrix.platform == 'macos-latest'
+      if: github.event_name == 'pull_request' && matrix.platform == 'macos-latest'
       run: go build -v ./...
       env:
         GOPATH: /Users/runner/runners/2.161.0/work/actions-go-acme/go
 
             
     - name: Run end-to-end tests on Linux
-      if: github.event_name == 'push' && matrix.platform == 'ubuntu-latest'
+      if: github.event_name == 'pull_request' && matrix.platform == 'ubuntu-latest'
       run: go build -v ./...
       env:
         GOPATH: /home/runner/work/actions-go-acme/go 
 
     - name: Run end-to-end tests on Windows
-      if: github.event_name == 'push' && matrix.platform == 'windows-latest'
+      if: github.event_name == 'pull_request' && matrix.platform == 'windows-latest'
       run: go build -v .
       env:
        GOPATH: d:\a\actions-go-acme\go\
