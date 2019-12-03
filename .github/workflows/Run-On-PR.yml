@@ -61,7 +61,7 @@ jobs:
         SLACK_BOT_TOKEN: ${{ secrets.SLACK_WEBHOOK }}
       uses: pullreminders/slack-action@master
       with:
-        args: '{\"channel\":\"aly-test\",\"text\":\":github: :package: Package PR-Build-Test Failed !! Fix Your Code! :sob:\",\"username\":\"GitHub Action\"}'
+        args: '{\"channel\":\"aly-test\",\"text\":\":github: :package: Package PR-Build-Test Failed !! Fix Your Code! :booom:\",\"username\":\"GitHub Action\"}'
 
     - name: Notify Slack Success 
       env:
