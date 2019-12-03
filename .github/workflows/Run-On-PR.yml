@@ -68,4 +68,4 @@ jobs:
         SLACK_BOT_TOKEN: ${{ secrets.SLACK_WEBHOOK }}
       uses: pullreminders/slack-action@master
       with:
-        args: '{\"channel\":\"aly-test\",\"text\":\":github: :package: Package PR-Build-Test Success !! :aw_yeah:\",\"username\":\"GitHub Action\"}' 
+        args: '{\"channel\":\"aly-test\",\"text\":\":github: :package: Package PR-Build-Test Success !! :celebrate:\",\"username\":\"GitHub Action\"}' 
